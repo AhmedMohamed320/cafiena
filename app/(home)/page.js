@@ -6,7 +6,7 @@ export default function Home() {
         <section className={classes.section}>
             <header>
                 <div className={classes.bgImage}>
-                    <img src="/hero.jpg" alt="" />
+                    <img src="/hero.webp" alt="background image" />
                 </div>
                 <div className={classes.welcome}>
                     <div className="w-fit flex flex-col justify-between h-full">
