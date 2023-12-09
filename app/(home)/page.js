@@ -1,9 +1,20 @@
+"use client";
+import { useRef, useState } from "react";
 import classes from "./Home.module.css";
 import { FaFacebookF } from "react-icons/fa6";
 
 export default function Home() {
+    const [isActive, setIsActive] = useState(false);
+    const handleClick = () => {
+        setIsActive(!isActive);
+    };
     return (
         <section className={classes.section}>
+            <div
+                className={`${classes.circle1} ${
+                    isActive ? `${classes.active}` : ""
+                }`}
+            ></div>
             <header>
                 <div className={classes.bgImage}>
                     <img src="/hero.webp" alt="background image" />
@@ -25,7 +36,10 @@ export default function Home() {
                                     البن قبل التحضير للحصول على طحنة مناسبة
                                 </p>
                             </div>
-                            <button>اطلب الان</button>
+                            <div>
+                                <button onClick={handleClick}>اطلب الان</button>
+                                <button onClick={handleClick}>من نحن</button>
+                            </div>
                         </div>
                         <div className={classes.qrCode}>
                             <div>
