@@ -109,7 +109,7 @@
     transform: translate(-50%, -50%) scale(1.05);
     width: 100%;
     height: 100%;
-    filter: blur(1px);
+    filter: brightness(70%);
 }
 
 .bgImage img {
@@ -157,6 +157,6 @@
     }
 
     .bgImage {
-        filter: blur(5px);
+        filter: blur(3px) brightness(70%);
     }
 }
