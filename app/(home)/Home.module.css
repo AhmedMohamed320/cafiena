@@ -247,7 +247,7 @@
 
 .upForm>div>div>p {
     color: var(--color-cafe);
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-weight: 600;
     text-align: center;
 }
@@ -265,7 +265,7 @@
 .upForm>div>div ul li {
     color: var(--color-dark-5);
     padding: 0.2rem;
-    font-size: 1.9rem;
+    font-size: 2.2rem;
     border-radius: 0.5rem;
     text-align: center;
     cursor: pointer;
@@ -281,6 +281,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
+    margin-top: 1rem;
 }
 
 .btnsChangeFormPage li {
@@ -306,7 +307,7 @@
     position: absolute;
     bottom: 15rem;
     left: 23rem;
-    animation:rotate 15s ease-in-out infinite ,  scale 4s ease-in-out ;
+    animation: rotate 15s ease-in-out infinite, scale 2s ease-in-out;
 }
 
 .randomImage1,
@@ -334,7 +335,7 @@
 
 .section2.active .randomImage2 {
     top: 2rem;
-}   
+}
 
 @keyframes rotateInfinite {
     0% {
@@ -350,18 +351,24 @@
 
     0%,
     100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(10deg);
+    }
+
+
+    75% {
         transform: rotate(-10deg);
     }
 
-    50% {
-        transform: rotate(10deg);
-    }
 }
 
 @keyframes scale {
 
     0% {
-        transform: scale(0);
+        transform: scale(0.7);
     }
 
     100% {
@@ -415,5 +422,10 @@
     .image1 {
         width: 14rem;
         left: calc(50% - 7rem);
+    }
+
+    .makeYourCafe {
+        width: 100%;
+        text-align: center;
     }
 }

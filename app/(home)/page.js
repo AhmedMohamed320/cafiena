@@ -150,12 +150,14 @@ export default function Home() {
                         <div className={classes.image}>
                             <img src="/cup_4.png" alt="cup coffee" />
                         </div>
-                        <p className="text-2xl text-center pb-8 text-neutral-600">
-                            {type1Value && <span>{type1Value} - </span>}
-                            {type2Value && <span>{type2Value} - </span>}
-                            {type3Value && <span>{type3Value} - </span>}
-                            {type4Value && <span>{type4Value} </span>}
-                        </p>
+                        {type1Value && (
+                            <p className="text-2xl text-center pb-8 text-neutral-600">
+                                {type1Value && <span>{type1Value} - </span>}
+                                {type2Value && <span>{type2Value} - </span>}
+                                {type3Value && <span>{type3Value} - </span>}
+                                {type4Value && <span>{type4Value} </span>}
+                            </p>
+                        )}
                         <div className="w-full flex items-center justify-center flex-col">
                             <div
                                 className={`${classes.type1} ${
