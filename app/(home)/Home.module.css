@@ -10,20 +10,17 @@
     width: 120rem;
     height: 120rem;
     background-color: var(--color-main-light);
-    clip-path: polygon(0% 0%, 100% 0%, 0% 100%);
     top: 0;
     transform: translateY(-10rem);
     left: 100%;
     transition: 2s;
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 
 .verticalText2 {
     color: var(--color-cafe);
-    writing-mode: unset !important;
-    transform: rotate(-45deg) translateY(-10rem);
+    transform: rotate(-180deg) ;
 }
 
 .circle1.active {
@@ -165,10 +162,6 @@
 
 @media (max-width:45rem) {
 
-    .circle1 {
-        transition: 1.2s;
-    }
-
     .title {
         font-size: 4rem;
         max-width: none;
@@ -228,7 +221,7 @@
     -webkit-backdrop-filter: blur(10px);
     border-radius: 10px;
     border: 1px solid rgba(255, 255, 255, 0.18);
-    transition: 1s;
+    transition: 1.5s;
     padding: 2rem;
 }
 
@@ -244,13 +237,13 @@
 }
 
 .randomImage1 {
-    animation: moveUpDown 2s infinite;
+    animation: moveUpDown 3s infinite;
     top: -20rem;
     right: 1rem;
 }
 
 .randomImage2 {
-    animation: moveUpDown 2s 1s infinite;
+    animation: moveUpDown 3s 1.5s infinite;
     bottom: -20rem;
     left: 1rem;
 }
