@@ -2,12 +2,13 @@
 import { useEffect, useState } from "react";
 import classes from "./Home.module.css";
 import { FaFacebookF } from "react-icons/fa6";
-import { IoArrowRedoOutline, IoArrowUndoOutline } from "react-icons/io5";
+import { FaLongArrowAltLeft, FaLongArrowAltRight } from "react-icons/fa";
+import { IoIosArrowForward } from "react-icons/io";
 
 export default function Home() {
     const [isActive, setIsActive] = useState(false);
     const handleClick = () => {
-        setIsActive(!isActive);
+        setIsActive(true);
     };
     // ---------
     const [numPage, setNumPage] = useState(0);
@@ -15,10 +16,8 @@ export default function Home() {
     const [page1IsActive, setPage1IsActive] = useState(false);
     useEffect(() => {
         if (numPage == 0) {
-            setPage0IsActive(true);
             setPage1IsActive(false);
         } else if (numPage == 1) {
-            setPage0IsActive(false);
             setPage1IsActive(true);
         }
     }, [numPage]);
@@ -63,8 +62,8 @@ export default function Home() {
                 }`}
             >
                 <div className={classes.image1}>
-                        <img src="/cup_2.png" alt="cup page" />
-                    </div>
+                    <img src="/cup_2.png" alt="cup page" />
+                </div>
                 <div className={classes.welcome}>
                     <div className={classes.bgImage}>
                         <img src="/hero.webp" alt="background image" />
@@ -130,85 +129,114 @@ export default function Home() {
                     page1IsActive ? `${classes.active}` : ""
                 }`}
             >
-                <div className=" relative w-full h-full flex flex-col gap-12 items-center justify-center">
-                    <p className="text-5xl font-semibold">
-                        اعمل قهوتك على مزاجك
-                    </p>
-                    <p className="text-3xl">
-                        {type1Value && <span>{type1Value} - </span>}
-                        {type2Value && <span>{type2Value} - </span>}
-                        {type3Value && <span>{type3Value} - </span>}
-                        {type4Value && <span>{type4Value} </span>}
-                    </p>
+                <div className=" relative w-full h-full flex flex-col gap-8">
+                    <div
+                        className={classes.arrowBack}
+                        onClick={() => {
+                            setNumPage(numPage - 1);
+                            setIsActive(false);
+                        }}
+                    >
+                        <IoIosArrowForward />
+                        <p
+                            className={`text-5xl font-semibold ${classes.makeYourCafe}`}
+                        >
+                            اعمل قهوتك على مزاجك
+                        </p>
+                    </div>
+
                     {/* ------------ */}
-                    <div className="w-full">
-                        <div
-                            className={`${classes.type1} ${
-                                numFormTypes === 0 ? `${classes.active}` : ""
-                            }`}
-                        >
-                            <ul onClick={handleChangeType1}>
-                                <li>
-                                    <p>برازيلي</p>
-                                </li>
-                                <li>
-                                    <p>تركي</p>
-                                </li>
-                                <li>
-                                    <p>عربي</p>
-                                </li>
-                            </ul>
+                    <div className={classes.upForm}>
+                        <div className={classes.image}>
+                            <img src="/cup_4.png" alt="cup coffee" />
                         </div>
-                        <div
-                            className={`${classes.type1} ${
-                                numFormTypes === 1 ? `${classes.active}` : ""
-                            }`}
-                        >
-                            <ul onClick={handleChangeType2}>
-                                <li>
-                                    <p>ساده</p>
-                                </li>
-                                <li>
-                                    <p>محوج</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div
-                            className={`${classes.type1} ${
-                                numFormTypes === 2 ? `${classes.active}` : ""
-                            }`}
-                        >
-                            <ul onClick={handleChangeType3}>
-                                <li>
-                                    <p>فاتح</p>
-                                </li>
-                                <li>
-                                    <p>وسط</p>
-                                </li>
-                                <li>
-                                    <p>غامق</p>
-                                </li>
-                            </ul>
-                        </div>
-                        <div
-                            className={`${classes.type1} ${
-                                numFormTypes === 3 ? `${classes.active}` : ""
-                            }`}
-                        >
-                            <ul onClick={handleChangeType4}>
-                                <li>
-                                    <p>ساده</p>
-                                </li>
-                                <li>
-                                    <p>عالريحه</p>
-                                </li>
-                                <li>
-                                    <p>مظبوطه</p>
-                                </li>
-                                <li>
-                                    <p>زياده</p>
-                                </li>
-                            </ul>
+                        <p className="text-2xl text-center pb-8 text-neutral-600">
+                            {type1Value && <span>{type1Value} - </span>}
+                            {type2Value && <span>{type2Value} - </span>}
+                            {type3Value && <span>{type3Value} - </span>}
+                            {type4Value && <span>{type4Value} </span>}
+                        </p>
+                        <div className="w-full flex items-center justify-center flex-col">
+                            <div
+                                className={`${classes.type1} ${
+                                    numFormTypes === 0
+                                        ? `${classes.active}`
+                                        : ""
+                                }`}
+                            >
+                                <p>نوع قهوتك</p>
+                                <ul onClick={handleChangeType1}>
+                                    <li>
+                                        <p>برازيلي</p>
+                                    </li>
+                                    <li>
+                                        <p>تركي</p>
+                                    </li>
+                                    <li>
+                                        <p>عربي</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div
+                                className={`${classes.type2} ${
+                                    numFormTypes === 1
+                                        ? `${classes.active}`
+                                        : ""
+                                }`}
+                            >
+                                <p>عايزها محوج ولا ساده؟</p>
+                                <ul onClick={handleChangeType2}>
+                                    <li>
+                                        <p>ساده</p>
+                                    </li>
+                                    <li>
+                                        <p>محوج</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div
+                                className={`${classes.type3} ${
+                                    numFormTypes === 2
+                                        ? `${classes.active}`
+                                        : ""
+                                }`}
+                            >
+                                <p>درجه اللون</p>
+                                <ul onClick={handleChangeType3}>
+                                    <li>
+                                        <p>فاتح</p>
+                                    </li>
+                                    <li>
+                                        <p>وسط</p>
+                                    </li>
+                                    <li>
+                                        <p>غامق</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div
+                                className={`${classes.type4} ${
+                                    numFormTypes === 3
+                                        ? `${classes.active}`
+                                        : ""
+                                }`}
+                            >
+                                <p>سكرك ايه ؟</p>
+                                <ul onClick={handleChangeType4}>
+                                    <li>
+                                        <p>ساده</p>
+                                    </li>
+                                    <li>
+                                        <p>عالريحه</p>
+                                    </li>
+                                    <li>
+                                        <p>مظبوطه</p>
+                                    </li>
+                                    <li>
+                                        <p>زياده</p>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                         <div>
                             <ul className={classes.btnsChangeFormPage}>
@@ -220,7 +248,7 @@ export default function Home() {
                                         }
                                     }}
                                 >
-                                    <IoArrowRedoOutline />
+                                    <FaLongArrowAltRight />
                                 </li>
                                 {numFormTypes < 3 ? (
                                     <li
@@ -233,7 +261,7 @@ export default function Home() {
                                             }
                                         }}
                                     >
-                                        <IoArrowUndoOutline />
+                                        <FaLongArrowAltLeft />
                                     </li>
                                 ) : (
                                     <li className="text-xl">
@@ -244,14 +272,13 @@ export default function Home() {
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
-                                            ارسال الى خدمه العملاء
+                                            ابعت طلبك
                                         </a>
                                     </li>
                                 )}
                             </ul>
                         </div>
                     </div>
-
                     {/* ------------ */}
                     <img
                         src="/cup.png"
