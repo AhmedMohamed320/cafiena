@@ -48,7 +48,6 @@ export default function Home() {
         setType4Value(selectedType);
     }
 
-
     return (
         <section className={classes.section}>
             <div
@@ -63,10 +62,13 @@ export default function Home() {
                     page0IsActive ? `${classes.active}` : ""
                 }`}
             >
-                <div className={classes.bgImage}>
-                    <img src="/hero.webp" alt="background image" />
-                </div>
+                <div className={classes.image1}>
+                        <img src="/cup_2.png" alt="cup page" />
+                    </div>
                 <div className={classes.welcome}>
+                    <div className={classes.bgImage}>
+                        <img src="/hero.webp" alt="background image" />
+                    </div>
                     <div className="w-fit flex flex-col justify-between h-full">
                         <div>
                             <div className={classes.title}>
@@ -260,7 +262,6 @@ export default function Home() {
                         src="/icon.png"
                         alt="icon"
                         className={classes.randomImage2}
-                        
                     />
                 </div>
             </section>
