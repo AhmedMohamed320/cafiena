@@ -307,7 +307,7 @@
     position: absolute;
     bottom: 15rem;
     left: 23rem;
-    animation: rotate 15s ease-in-out infinite, scale 2s ease-in-out;
+    animation: rotate 15s 2s ease-in-out infinite, scale 2s ease-in-out;
 }
 
 .randomImage1,
