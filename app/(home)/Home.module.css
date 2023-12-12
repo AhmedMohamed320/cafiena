@@ -7,11 +7,10 @@
 .circle1 {
     position: fixed;
     z-index: 100;
-    width: 120rem;
-    height: 120rem;
+    width: 100dvw;
+    height: 100dvh;
     background-color: var(--color-main-light);
     top: 0;
-    transform: translateY(-10rem);
     left: 100%;
     transition: 2s;
     display: flex;
@@ -20,11 +19,11 @@
 
 .verticalText2 {
     color: var(--color-cafe);
-    transform: rotate(-180deg) ;
+    transform: rotate(-180deg);
 }
 
 .circle1.active {
-    left: -120rem;
+    left: -100%;
 }
 
 .section header {
@@ -209,24 +208,21 @@
 .section2 {
     position: absolute;
     overflow: hidden;
-    transform: translateY(-50%);
-    top: 50%;
+    top: 0;
     right: 100%;
     margin: auto;
     z-index: 2;
-    width: 95vw;
-    height: 95dvh;
-    background: rgba(255, 255, 255, 0.20);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-radius: 10px;
-    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 100vw;
+    height: 100dvh;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
     transition: 1.5s;
     padding: 2rem;
 }
 
 .section2.active {
-    right: 2.5vw;
+    right: 0rem;
 }
 
 .randomImage1,
@@ -269,14 +265,19 @@
 }
 
 /* ------------- */
-.type1{
+.type1 {
     width: 100%;
 }
+
 .type1 ul {
     display: none;
     flex-direction: column;
-    gap: 2rem;
-    width: 100%;
+    gap: 1rem;
+    width: 80%;
+    max-width: 35rem;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
 }
 
 .type1 ul li {
@@ -286,13 +287,14 @@
     font-size: 2rem;
     border-radius: 0.5rem;
     text-align: center;
-    width: 80%;
-    max-width: 35rem;
-    margin: auto;
 }
 
 .type1.active ul {
     display: flex;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
 .btnsChangeFormPage {

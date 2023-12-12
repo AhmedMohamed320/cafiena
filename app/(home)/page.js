@@ -260,6 +260,7 @@ export default function Home() {
                         src="/icon.png"
                         alt="icon"
                         className={classes.randomImage2}
+                        
                     />
                 </div>
             </section>
