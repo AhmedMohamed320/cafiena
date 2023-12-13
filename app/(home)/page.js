@@ -61,9 +61,9 @@ export default function Home() {
                     page0IsActive ? `${classes.active}` : ""
                 }`}
             >
-                <div className={classes.image1}>
+                {/* <div className={classes.image1}>
                     <img src="/cup_2.png" alt="cup page" />
-                </div>
+                </div> */}
                 <div className={classes.welcome}>
                     <div className={classes.bgImage}>
                         <img src="/hero.webp" alt="background image" />
@@ -129,7 +129,7 @@ export default function Home() {
                     page1IsActive ? `${classes.active}` : ""
                 }`}
             >
-                <div className=" relative w-full h-full flex flex-col gap-8">
+                <div className=" relative w-full h-full flex flex-col">
                     <div
                         className={classes.arrowBack}
                         onClick={() => {
@@ -138,12 +138,12 @@ export default function Home() {
                         }}
                     >
                         <IoIosArrowForward />
-                        <p
-                            className={`text-5xl font-semibold ${classes.makeYourCafe}`}
-                        >
-                            اعمل قهوتك على مزاجك
-                        </p>
                     </div>
+                    <p
+                        className={`text-5xl text-center font-semibold ${classes.makeYourCafe}`}
+                    >
+                        اعمل قهوتك على مزاجك
+                    </p>
 
                     {/* ------------ */}
                     <div className={classes.upForm}>
@@ -283,15 +283,15 @@ export default function Home() {
                     </div>
                     {/* ------------ */}
                     <img
-                        src="/cup.png"
+                        src="/cup_2.png"
                         alt="cup"
                         className={classes.randomImage1}
                     />
-                    <img
+                    {/* <img
                         src="/icon.png"
                         alt="icon"
                         className={classes.randomImage2}
-                    />
+                    /> */}
                 </div>
             </section>
         </section>

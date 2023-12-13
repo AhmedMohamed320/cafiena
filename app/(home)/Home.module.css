@@ -184,11 +184,10 @@
 
 .arrowBack {
     color: var(--color-cafe-2);
-    font-size: 3rem;
+    font-size: 4rem;
     cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 2rem;
+    position:absolute;
+    bottom: 1rem;
 }
 
 .makeYourCafe {
@@ -213,13 +212,14 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    z-index: 102;
     background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 4rem;
     width: 100%;
     max-width: 32rem;
-    margin: auto;
+    margin:auto;
     padding: 15rem 1rem 1rem;
 }
 
@@ -302,40 +302,41 @@
 
 /* ------------- */
 
-.image1 {
+/* .image1 {
     width: 16rem;
     position: absolute;
     bottom: 15rem;
     left: 23rem;
     animation: rotate 15s 2s ease-in-out infinite, scale 2s ease-in-out;
-}
+} */
 
 .randomImage1,
 .randomImage2 {
-    width: 15rem;
+    width: 10rem;
     position: absolute;
-    transition: 2s 1.2s;
+    transition: 2s 1.7s;
+    z-index: 101;
 }
 
 .randomImage1 {
-    animation: moveUpDown 4s infinite;
     bottom: 115vh;
-    right: 1rem;
-}
-
-.randomImage2 {
-    animation: moveUpDown 4s 2s infinite;
-    top: 115vh;
     left: 1rem;
 }
 
+/* .randomImage2 {
+    animation: moveUpDown 4s 2s infinite;
+    top: 115vh;
+    left: 1rem;
+} */
+
 .section2.active .randomImage1 {
+    animation: moveUpDown 4s 2s infinite;
     bottom: 1rem;
 }
-
+/* 
 .section2.active .randomImage2 {
     top: 2rem;
-}
+} */
 
 @keyframes rotateInfinite {
     0% {
@@ -398,7 +399,7 @@
     }
 
     .section header {
-        padding: 2rem;
+        padding:4rem 2rem 2rem;
     }
 
     .title>p:nth-of-type(2) {
@@ -419,13 +420,8 @@
         filter: blur(3px) brightness(70%);
     }
 
-    .image1 {
+    /* .image1 {
         width: 14rem;
         left: calc(50% - 7rem);
-    }
-
-    .makeYourCafe {
-        width: 100%;
-        text-align: center;
-    }
+    } */
 }
