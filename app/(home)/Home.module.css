@@ -9,7 +9,7 @@
     z-index: 100;
     width: 100dvw;
     height: 100dvh;
-    background-color: var(--color-main-light);
+    background-color: #fafae2fb;
     top: 0;
     left: 100%;
     transition: 2s;
@@ -34,10 +34,10 @@
     grid-template-columns: 1fr auto;
     width: 100vw;
     height: 100%;
-    padding: 2rem 3rem 2rem 0rem;
 }
 
 .aside {
+    padding: 2rem 0 0;
     height: 100%;
     display: flex;
     justify-content: space-between;
@@ -58,19 +58,26 @@
 .social {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    background-color: rgba(54, 54, 54, 0.849);
+    padding: 1rem ;
+    border-top-right-radius:3rem ;
 }
 
 .social li {
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1rem;
     background-color: var(--color-main-light);
     color: var(--color-cafe);
     font-size: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.welcome{
+    padding: 2rem 3rem 2rem 0rem;
 }
 
 .welcome button {
@@ -149,7 +156,7 @@
     transform: translate(-50%, -50%) scale(1.05);
     width: 100%;
     height: 100%;
-    filter: brightness(50%);
+    filter: brightness(45%);
 }
 
 .bgImage img {
@@ -170,9 +177,9 @@
     z-index: 2;
     width: calc(100vw - 2rem);
     height: calc(100dvh - 2rem);
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(25px);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     border-radius: 1rem;
     transition: 2s;
     padding: 2rem;
@@ -183,7 +190,7 @@
 }
 
 .arrowBack {
-    color: var(--color-cafe-2);
+    color: var(--color-main-light);
     font-size: 4rem;
     cursor: pointer;
     position:absolute;
@@ -191,7 +198,7 @@
 }
 
 .makeYourCafe {
-    color: var(--color-cafe-2);
+    color: var(--color-main-light);
 }
 
 
@@ -213,9 +220,7 @@
     flex-direction: column;
     position: relative;
     z-index: 102;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: #fafae28a;
     border-radius: 4rem;
     width: 100%;
     max-width: 32rem;
@@ -236,7 +241,7 @@
 
 .upForm .image img {
     width: 25rem;
-    filter: drop-shadow(0px 1.1rem 10px gray);
+    filter: drop-shadow(0px 1.1rem 10px rgba(8, 8, 8, 0.432));
     animation: rotateInfinite 60s linear infinite;
 }
 
@@ -280,16 +285,17 @@
     margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 0.5rem;
     margin-top: 1rem;
 }
 
 .btnsChangeFormPage li {
-    background-color: var(--color-cafe);
+    background-color: var(--color-main-light);
+    color: var(--color-cafe);
     box-shadow: var(--box-shadow-1);
     width: 100%;
     height: 3rem;
-    border-radius: 3rem 0;
+    border-radius: 2rem 0 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -297,7 +303,7 @@
 }
 
 .btnsChangeFormPage li:nth-of-type(2) {
-    border-radius: 0 3rem;
+    border-radius: 0 2rem 0 3rem;
 }
 
 /* ------------- */

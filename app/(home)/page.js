@@ -71,7 +71,7 @@ export default function Home() {
                 </div> */}
                 <div className={classes.welcome}>
                     <div className={classes.bgImage}>
-                        <img src="/hero.webp" alt="background image" />
+                        <img src="/hero-2.webp" alt="background image" />
                     </div>
                     <div className="w-fit flex flex-col justify-between h-full">
                         <div>
@@ -278,7 +278,7 @@ export default function Home() {
                                         <FaLongArrowAltLeft />
                                     </li>
                                 ) : (
-                                    <li className="text-xl">
+                                    <li className="text-2xl">
                                         <a
                                             href={`https://wa.me/+201280626320?text=${encodeURIComponent(
                                                 `${type1Value} - ${type2Value} - ${type3Value} - ${type4Value}`
