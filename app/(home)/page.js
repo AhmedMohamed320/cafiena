@@ -14,11 +14,16 @@ export default function Home() {
     const [numPage, setNumPage] = useState(0);
     const [page0IsActive, setPage0IsActive] = useState(true);
     const [page1IsActive, setPage1IsActive] = useState(false);
+    const [page2IsActive, setPage2IsActive] = useState(false);
+
     useEffect(() => {
         if (numPage == 0) {
             setPage1IsActive(false);
+            setPage2IsActive(false);
         } else if (numPage == 1) {
             setPage1IsActive(true);
+        } else if (numPage == 2) {
+            setPage2IsActive(true);
         }
     }, [numPage]);
     // -----------------
@@ -93,7 +98,14 @@ export default function Home() {
                                 >
                                     اطلب الان
                                 </button>
-                                <button onClick={handleClick}>من نحن</button>
+                                <button
+                                    onClick={() => {
+                                        handleClick();
+                                        setNumPage(2);
+                                    }}
+                                >
+                                    من نحن
+                                </button>
                             </div>
                         </div>
                         <div className={classes.qrCode}>
@@ -133,7 +145,7 @@ export default function Home() {
                     <div
                         className={classes.arrowBack}
                         onClick={() => {
-                            setNumPage(numPage - 1);
+                            setNumPage(0);
                             setIsActive(false);
                         }}
                     >
@@ -292,6 +304,31 @@ export default function Home() {
                         alt="icon"
                         className={classes.randomImage2}
                     /> */}
+                </div>
+            </section>
+            {/* ---------------- */}
+            <section
+                className={`${classes.section2} ${
+                    page2IsActive ? `${classes.active}` : ""
+                }`}
+            >
+                <div className=" relative w-full h-full flex flex-col">
+                    <div
+                        className={classes.arrowBack}
+                        onClick={() => {
+                            setNumPage(0);
+                            setIsActive(false);
+                        }}
+                    >
+                        <IoIosArrowForward />
+                    </div>
+                    <p
+                        className={`text-5xl text-center font-semibold ${classes.makeYourCafe}`}
+                    >
+                        كافينا
+                    </p>
+
+                   
                 </div>
             </section>
         </section>

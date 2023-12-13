@@ -314,7 +314,7 @@
 .randomImage2 {
     width: 10rem;
     position: absolute;
-    transition: 2s 1.7s;
+    transition: 2s 1.6s;
     z-index: 101;
 }
 
